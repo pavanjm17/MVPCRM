@@ -1,0 +1,28 @@
+:root { --ink:#1b2340; --paper:#f6f8fb; --line:#d9dfea; --saffron:#e8920c; --leaf:#1f7a4d; --red:#b3261e; font-family: "Noto Sans", system-ui, sans-serif; color: var(--ink); }
+* { box-sizing: border-box; }
+body { margin:0; background: var(--paper); }
+.shell { max-width: 1100px; margin: 0 auto; padding: 16px; }
+header { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:12px; border-bottom:3px solid var(--saffron); padding-bottom:10px; }
+h1 { margin:0; font-size:1.4rem; } h2 { font-size:1.05rem; margin-top:28px; }
+nav button { background:none; color:var(--ink); border:0; padding:8px 12px; border-radius:0; font-weight:500; }
+nav button.on { border-bottom:2px solid var(--ink); font-weight:700; }
+button { background: var(--ink); color:#fff; border:0; border-radius:4px; padding:8px 14px; cursor:pointer; font:inherit; }
+button.ghost { background:none; color:var(--red); padding:4px 8px; }
+button:focus-visible, input:focus-visible, select:focus-visible { outline:2px solid var(--saffron); outline-offset:2px; }
+input, select { padding:8px; border:1px solid var(--line); border-radius:4px; font:inherit; background:#fff; min-width:0; }
+.row { display:flex; flex-wrap:wrap; gap:8px; margin:16px 0; }
+.row input { flex:1 1 140px; }
+.scroll { overflow-x:auto; }
+table { width:100%; border-collapse:collapse; background:#fff; }
+th, td { text-align:left; padding:10px; border-bottom:1px solid var(--line); white-space:nowrap; }
+.stats { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:12px; margin-top:20px; }
+.stats div { background:#fff; border-left:4px solid var(--saffron); padding:14px; display:flex; flex-direction:column; gap:4px; }
+.stats b { font-size:1.6rem; }
+.pipeline { display:flex; flex-wrap:wrap; gap:4px; }
+.stage { flex-basis:110px; padding:14px; color:#fff; background:var(--ink); display:flex; flex-direction:column; }
+.stage b { font-size:1.4rem; } .s-WON { background:var(--leaf); } .s-LOST { background:#6b7280; } .s-NEW { background:#3b4a8a; }
+.tasks { list-style:none; padding:0; display:grid; gap:6px; }
+.tasks li { display:flex; gap:12px; align-items:center; background:#fff; padding:10px 12px; border-left:4px solid var(--line); }
+.tasks li span { flex:1; } .tasks li.late { border-color:var(--red); } .tasks li.done { opacity:.5; text-decoration:line-through; }
+.err { color:var(--red); } .empty { color:#5b6478; }
+@media (prefers-reduced-motion: no-preference) { button { transition: opacity .15s; } button:hover { opacity:.85; } }
